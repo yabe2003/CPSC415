@@ -1,0 +1,25 @@
+name: Build and Test Microservice
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-microservice
+
+    - name: Run the Docker container
+      run: docker run -d --name my-microservice -e SOME_ENV_VAR=value -p 8080:8080 my-microservice
+
+    - name: Test the RESTful service
+      run: |
+        sleep 10  # Wait for the server to start
+        curl -f http://localhost:8080/ || exit 1
+
+    - name: Cleanup
+      run: docker stop my-microservice && docker rm my-microservice
