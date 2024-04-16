@@ -18,9 +18,8 @@ app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 
 @app.route("/")
 def home():
-    return jsonify({
-        "Message": "You made it!!!"
-    })
+    print("Home route was accessed")
+    return jsonify({"Message": "You made it!!!"})
 
 @app.route("/access", methods=["GET", "POST", "PUT", "DELETE"])
 def access():
