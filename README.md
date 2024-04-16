@@ -1,55 +1,52 @@
 # Flask API Project
 
 ## Description
-This project provides a web API for managing access details for users to servers. It allows users to get, post, update, and delete access details.
+This Flask-based web API manages user access details to servers. It supports operations to create, retrieve, update, and delete user access details.
 
 ## Installation
-To install and run this project, follow these steps:
+Follow these steps to install and run the project:
 
-1. Clone the repository:
-git clone <repository-url>
+1. **Clone the Repository**:
+   ```
+   git clone <repository-url>
+   ```
 
-markdown
-Copy code
+2. **Install Required Python Packages**:
+   ```
+   pip install -r requirements.txt
+   ```
 
-2. Install required Python packages:
-pip install -r requirements.txt
-
-arduino
-Copy code
-
-3. Build and run the Docker container:
-docker-compose up --build
-
-markdown
-Copy code
+3. **Build and Run Docker Container**:
+   ```
+   docker-compose up --build
+   ```
 
 ## Usage
-Once the application is running, you can access the API through your web browser at `http://localhost:8080`. The API supports the following operations:
+Access the API through your web browser at `http://localhost:8080`. It supports the following endpoints:
 
-- **GET /**: Retrieve basic server access details.
-- **GET /access**: Retrieve or query specific access details.
-- **POST /access**: Post new access details.
-- **PUT /access**: Update existing access details.
-- **DELETE /access**: Delete existing access details.
+- **GET /**: Retrieves basic server access details.
+- **GET /access**: Fetches or queries specific access details.
+- **POST /access**: Adds new access details.
+- **PUT /access**: Updates existing access details.
+- **DELETE /access**: Removes access details.
 
-For detailed API documentation, navigate to `http://localhost:8080/api/docs`.
+For detailed API documentation, visit `http://localhost:8080/api/docs`.
 
-## Files and Directories
-- **app.py**: The main Python application file for the API.
-- **requirements.txt**: Contains a list of Python packages required to run the application.
-- **Dockerfile**: A Dockerfile for building the application's Docker image.
-- **compose.yaml**: Docker Compose file to manage the application services.
-- **static/swagger.json**: JSON file defining the Swagger API documentation.
+## Project Structure
+- **app.py**: Main application file.
+- **requirements.txt**: Lists dependencies required to run the application.
+- **Dockerfile**: Dockerfile for building the Docker image.
+- **compose.yaml**: Docker Compose file for service management.
+- **static/swagger.json**: Defines the Swagger API documentation.
 
 ## Contributing
-Contributions are welcome. Please fork the repository and submit a pull request with your changes.
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Authors
 - Your Name (your.email@example.com)
 
 ## Acknowledgments
-Thanks to everyone who has contributed to this project.
+Special thanks to all contributors who have made this project possible.
