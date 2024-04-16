@@ -8,7 +8,7 @@ Follow these steps to install and run the project:
 
 1. **Clone the Repository**:
    ```
-   git clone <repository-url>
+   git clone https://github.com/yabe2003/CPSC415.git
    ```
 
 2. **Install Required Python Packages**:
